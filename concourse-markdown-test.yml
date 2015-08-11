@@ -1,0 +1,16 @@
+resources:
+- name: concourse-markdown-test
+  type: git
+  source: 
+    uri: https://github.com/pivotal-devin-fallak/concourse-markdown-test.git
+    branch: master
+
+jobs:
+- name: show-me-kittens
+  plan:
+  - get: concourse-markdown-test
+  - task: show-them-all
+    config:
+      platform: linux
+      run: 
+        path: concourse-markdown-test/show-me-kittens.sh
