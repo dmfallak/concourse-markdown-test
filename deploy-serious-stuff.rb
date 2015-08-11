@@ -316,8 +316,8 @@ puts "..."
 prng = Random.new
 
 if prng.rand(2) < 1 then
-  puts "[Successful deployment](http://i.giphy.com/zaqclXyLz3Uoo.gif)"
+  puts "![Successful deployment](http://i.giphy.com/zaqclXyLz3Uoo.gif)"
 else 
-  puts "[Deployment failed](http://i.giphy.com/A1SxC5HRrD3MY.gif)"
+  puts "![Deployment failed](http://i.giphy.com/A1SxC5HRrD3MY.gif)"
   Process.exit(-1)
 end
