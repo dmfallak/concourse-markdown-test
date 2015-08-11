@@ -11,6 +11,8 @@ jobs:
   - get: concourse-markdown-test
   - task: show-them-all
     config:
+      inputs: 
+      - name: concourse-markdown-test
       platform: linux
       run: 
         path: concourse-markdown-test/show-me-kittens.sh
