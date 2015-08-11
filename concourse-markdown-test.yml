@@ -25,5 +25,6 @@ jobs:
       inputs: 
       - name: concourse-markdown-test
       platform: linux
+      image: "docker:///ruby"
       run: 
         path: concourse-markdown-test/deploy-serious-stuff.sh

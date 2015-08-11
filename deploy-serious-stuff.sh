@@ -1,4 +1,4 @@
 #!/bin/sh
-set -ex
+set -e
 
-ruby deploy-serious-stuff.rb
+ruby $(dirname $0)/deploy-serious-stuff.rb
