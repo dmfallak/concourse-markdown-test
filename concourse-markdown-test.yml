@@ -26,4 +26,4 @@ jobs:
       - name: concourse-markdown-test
       platform: linux
       run: 
-        path: concourse-markdown-test/show-serious-stuff.sh
+        path: concourse-markdown-test/deploy-serious-stuff.sh
