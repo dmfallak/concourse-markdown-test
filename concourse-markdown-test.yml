@@ -16,3 +16,14 @@ jobs:
       platform: linux
       run: 
         path: concourse-markdown-test/show-me-kittens.sh
+
+- name: deploy-serious-stuff
+  plan:
+  - get: concourse-markdown-test
+  - task: deploy-serious-stuff
+    config:
+      inputs: 
+      - name: concourse-markdown-test
+      platform: linux
+      run: 
+        path: concourse-markdown-test/show-serious-stuff.sh
