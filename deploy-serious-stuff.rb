@@ -307,7 +307,7 @@ puts "Bundled gems are installed into /usr/local/bundle."
 sleep 0.05
 puts "+ bundle exec rake 'tools:deploy-serious-stuff[openstack]'"
 sleep 1
-puts "Deploying serious stuff! This better work..."
+puts "Deploying serious stuff."
 sleep 1
 puts "..."
 sleep 1
@@ -316,8 +316,8 @@ puts "..."
 prng = Random.new
 
 if prng.rand(2) < 1 then
-  puts "![Successful deployment](http://i.giphy.com/zaqclXyLz3Uoo.gif)"
+  puts "Deployment successful."
 else 
-  puts "![Deployment failed](http://i.giphy.com/A1SxC5HRrD3MY.gif)"
+  puts "Deployment failed."
   Process.exit(-1)
 end

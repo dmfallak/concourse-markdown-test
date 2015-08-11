@@ -28,3 +28,19 @@ jobs:
       image: "docker:///ruby"
       run: 
         path: concourse-markdown-test/deploy-serious-stuff.sh
+    on_success:
+      task: show-success
+      config:
+        inputs: 
+        - name: concourse-markdown-test
+        platform: linux
+        run: 
+          path: concourse-markdown-test/on-success.sh
+    on_failure:
+      task: show-failure
+      config:
+        inputs: 
+        - name: concourse-markdown-test
+        platform: linux
+        run: 
+          path: concourse-markdown-test/on-failure.sh
